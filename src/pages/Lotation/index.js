@@ -25,7 +25,7 @@ async function searchBus(e){
   const allBus = response.data;
   
   let filterBus = allBus.filter((bus) => {
-     return bus.nome === inputNameBus;
+     return bus.nome === inputNameBus.toUpperCase();
   });
 
   if(filterBus.length === 0){
